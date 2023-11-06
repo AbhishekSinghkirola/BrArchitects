@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
+:root {
+  --primary-color: #fff;
+  --secondary-color: #000;
+  --accent-color: #ccc;
+  --primary-font: "Poppins", sans-serif;
+  --brand-font: "agbalumo";
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--primary-font);
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/* ----------------------------- Navbar Desktop ----------------------------- */
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 2rem;
+}
+
+.navbar-brand {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  color: var(--secondary-color);
+  font-family: var(--brand-font);
+  font-size: 1.4rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  color: var(--secondary-color);
+}
+
+.navbar a:hover {
+  background-color: var(--accent-color);
+}
+
+/* ----------------------------- Navabar Mobile ----------------------------- */
+.toggle-icon {
+  padding: 1rem 1.5rem;
+  display: none;
+  cursor: pointer;
+}
+
+.navbar-mobile {
+  display: none;
+}
+
+.navbar-mobile a {
+  display: block;
+  padding: 0.4rem 1.5rem;
+  color: var(--secondary-color);
+}
+
+.navbar-mobile a:hover {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Main Section                                */
+/* -------------------------------------------------------------------------- */
+main {
+  flex-grow: 1;
+}
+
+/* ------------------------------ Hero Section ------------------------------ */
+#hero {
+  position: relative;
+}
+
+#hero img {
+  width: 100%;
+  object-fit: cover;
+  /* height: 90vh; */
+}
+
+.hero-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  font-size: 2.4rem;
+  color: var(--primary-color);
+  transform: translate(-50%, -50%);
+}
+
+.hero-content > span {
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+}
+
+.hero-content > span:first-of-type {
+  background-color: var(--secondary-color);
+  opacity: 0.7;
+}
+
+/* ---------------------------- Projects Section ---------------------------- */
+
+.projects-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.project {
+  position: relative;
+  width: calc(25% - 1rem);
+}
+
+.project > img {
+  width: 100%;
+}
+
+.project > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+/* ------------------------------ About section ----------------------------- */
+.about-desc {
+  margin-block: 2rem;
+}
+
+.members-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.member {
+  width: calc(25% - 1rem);
+}
+
+.member > img {
+  filter: grayscale(75%);
+}
+.member > h2 {
+  padding-top: 0.7rem;
+  opacity: 0.9;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  background-color: var(--accent-color);
+  cursor: pointer;
+  font-size: 1.024rem;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background-color: #8d8a8a;
+}
+
+/* ----------------------------- Contact Section ---------------------------- */
+#contact > form {
+  margin-top: 2rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  margin-block: 1rem;
+  padding: 0.8rem;
+}
+
+.send-btn {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  margin-top: 1rem;
+  border: none;
+  font-size: 1.1rem;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.send-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+}
+
+/* ----------------------------- Footer Section ----------------------------- */
+footer {
+  padding: 2rem 1rem;
+  background-color: var(--secondary-color);
+  text-align: center;
+}
+
+footer > *,
+footer a {
+  color: var(--primary-color);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  utilities                                 */
+/* -------------------------------------------------------------------------- */
+.container {
+  max-width: 100%;
+  width: 1500px;
+  padding: 4rem 1rem;
+  margin-inline: auto;
+}
+
+hr {
+  max-width: 100%;
+  width: 1500px;
+  margin: 1rem auto;
+  opacity: 0.4;
+}
+
+.fw-normal {
+  font-weight: normal;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-muted {
+  opacity: 0.7;
+}
+
+.my-1 {
+  margin-block: 1rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               Media Querries                               */
+/* -------------------------------------------------------------------------- */
+@media only screen and (max-width: 768px) {
+  .nav {
+    padding-inline: 0;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .toggle-icon {
+    display: block;
+  }
+
+  /* ------------------------------ Hero section ------------------------------ */
+  .hero-content > span:nth-child(2) {
+    display: none;
+  }
+
+  /* ---------------------------- Projects Section ---------------------------- */
+  .projects-wrapper {
+    flex-direction: column;
+  }
+
+  .project {
+    position: relative;
+    width: 100%;
+  }
+
+  /* ----------------------------- About Section ----------------------------- */
+  .members-wrapper {
+    flex-direction: column;
+  }
+
+  .member {
+    width: 100%;
+  }
+
+  /* -------------------------------------------------------------------------- */
+  /*                                  Utilities                                 */
+  /* -------------------------------------------------------------------------- */
+  .container {
+    padding: 2rem 1rem;
+  }
+}
